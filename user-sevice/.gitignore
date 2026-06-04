@@ -1,0 +1,60 @@
+# --- Build Outputs ---
+target/
+build/
+*.jar
+*.war
+*.ear
+*.class
+
+# --- IDE & Editor Specific ---
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse/STS
+.settings/
+.classpath
+.project
+.factorypath
+.springBeans
+.sts4-cache
+.apt_generated
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# --- OS & System ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# --- Logs & External Data ---
+*.log
+*.log.*
+logs/
+data/
+h2-database/
+
+# --- Sensitive Configuration ---
+# Ignore environment-specific or secret files
+application-local.yml
+application-dev.yml
+application-prod.yml
+*.properties
+*.yaml
+# But keep the base templates
+!application.properties
+!application.yml
+
+# --- Project Specific ---
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties

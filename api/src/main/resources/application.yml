@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+cloud:
+  gateway:
+    routes:
+      - id: user-service
+        uri: http://localhost:8081
+        predicates:
+          - Path=/api/users/**
+      - id: job-service
+        uri: http://localhost:8082
+        predicates:
+          - Path=/api/jobs/**
+      - id: ai-service
+        uri: http://localhost:8084
+        predicates:
+          - Path=/api/ai/**
