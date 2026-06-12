@@ -15,10 +15,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Build user-service
-        run: cd user-service && mvn clean package -DskipTests
+        run: cd user-sevice && mvn clean package -DskipTests
       - name: Build job-service
-        run: cd job-service && mvn clean package -DskipTests
+        run: cd job-sevice && mvn clean package -DskipTests
       - name: Build notification-service
-        run: cd notification-service && mvn clean package -DskipTests
+        run: cd notification-sevice && mvn clean package -DskipTests
       - name: Build ai-service
-        run: cd ai-service && mvn clean package -DskipTests
+        run: cd ai-sevice && mvn clean package -DskipTests
