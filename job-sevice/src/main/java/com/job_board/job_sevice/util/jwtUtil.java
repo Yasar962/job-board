@@ -1,4 +1,4 @@
-package com.job_board.user_sevice.util;
+package com.job_board.job_sevice.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -25,10 +25,9 @@ public class jwtUtil {
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
-    public String generateToken(String email, String role,Long userId){
+    public String generateToken(String email, String role){
         Map<String,Object> claims = new HashMap<>();
-        claims.put("role", role);
-        claims.put("userId", userId);
+        claims.put("Role",role);
 
         return Jwts.builder()
                 .claims(claims)
