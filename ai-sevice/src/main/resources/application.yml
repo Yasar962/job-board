@@ -10,7 +10,7 @@ server:
 
 gemini:
   api:
-    key: AQ.Ab8RN6J9_LKZRtwAhod8h26LJf6-0sb6qGGGsHhhQgvnR4x3dQ
+    key: ${GEMINI_API_KEY}
     url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
 
 springdoc:
