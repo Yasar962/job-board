@@ -33,7 +33,7 @@ public class AuthService {
                 .role(request.getRole())
                 .build();
         User savedUser = userRepo.save(user);
-        String token = jwtUtil.generateToken(savedUser.getEmail(), savedUser.getRole().name());
+        String token = jwtUtil.generateToken(savedUser.getEmail(), savedUser.getRole().name(), savedUser.getId());
 
         return AuthResponse.builder()
                 .email(savedUser.getEmail())
@@ -53,7 +53,7 @@ public class AuthService {
             throw new BadCredentialsException("Password doesn't Match");
         }
 
-        String token = jwtUtil.generateToken(user.getEmail(),user.getRole().name());
+        String token = jwtUtil.generateToken(user.getEmail(),user.getRole().name(), user.getId());
 
         return AuthResponse.builder()
                 .token(token)

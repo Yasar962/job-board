@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: notification-sevice
+    autoconfigure:
+      exclude:
+        - org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+        - org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mohdyasar962@gmail.com
+    password: itgn vlaa gcpf xcgw
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+server:
+  port: 8083
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

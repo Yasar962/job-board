@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ai-sevice
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+      - org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration
+server:
+  port: 8084
+
+gemini:
+  api:
+    key: AQ.Ab8RN6J9_LKZRtwAhod8h26LJf6-0sb6qGGGsHhhQgvnR4x3dQ
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
